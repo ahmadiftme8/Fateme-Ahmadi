@@ -8,13 +8,16 @@
     position: relative;
     z-index:1;
     padding-top: 140px;
-
+    margin-top: 90px;
     width: 100%;
     height: 60vh;
     background-image: url(/images/blog/cover1.webp);
     background-position: left;
     background-size: cover;
     position: relative;
+    /* background-color: #202020; */
+    border: 25px solid #202020;
+    border-radius:3rem;
    
 
 }

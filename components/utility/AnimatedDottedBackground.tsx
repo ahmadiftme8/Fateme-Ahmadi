@@ -1,10 +1,16 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./AnimatedDottedBackground.module.css";
 
 export function AnimatedDottedBackground() {
+  const pathname = usePathname();
   const bgRef = useRef<HTMLDivElement>(null);
+
+  if (pathname === "/en/blog" || pathname === "/fa/blog") {
+    return null;
+  }
 
   useEffect(() => {
     const updateOffset = () => {
