@@ -1,5 +1,6 @@
-import AboutHero from "@/components/blocks/AboutHero";
+import AboutHero from "@/components/about/AboutHero";
 import { getTranslations } from "next-intl/server";
+
 
 type PageParams = {
   params: Promise<{ locale: string }>;
@@ -26,6 +27,7 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
+      
     </>
   );
 }

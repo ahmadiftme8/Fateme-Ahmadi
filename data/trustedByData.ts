@@ -13,7 +13,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -45,7 +45,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -101,7 +101,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -130,7 +130,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -154,7 +154,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -229,7 +229,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -269,7 +269,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -297,7 +297,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -326,7 +326,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -350,7 +350,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -379,7 +379,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -407,7 +407,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -435,7 +435,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>
@@ -465,7 +465,7 @@ export const trustedBrands: TrustedBrand[] = [
   <defs>
     <style>
       .cls-1 {
-        fill: #33518c;
+        fill: var(--color-accent);
         stroke-width: 0px;
       }
     </style>

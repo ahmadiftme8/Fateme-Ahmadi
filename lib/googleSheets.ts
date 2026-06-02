@@ -1,5 +1,9 @@
 import { google } from "googleapis";
 
+type SheetRow = Record<string, string>;
+
+const TRUE_VALUES = new Set(["TRUE", "YES", "1"]);
+
 export async function getSheetData() {
     try {
         if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY) {
@@ -16,7 +20,7 @@ export async function getSheetData() {
         });
 
         const sheets = google.sheets({ version: "v4", auth });
-        const spreadsheetId = "1xrOfLGzPUofmJgeNBicavmned5DAEA7Q56DVrn8fClU";
+        const spreadsheetId = process.env.GOOGLE_SHEET_ID || "1xrOfLGzPUofmJgeNBicavmned5DAEA7Q56DVrn8fClU";
         const range = "Sheet1!A1:Z";
 
         const response = await sheets.spreadsheets.values.get({
@@ -31,21 +35,21 @@ export async function getSheetData() {
         }
 
         // Extract headers (first row) and data
-        const headers = rows[0];
+        const headers = rows[0].map((header) => String(header).trim());
         const rawData = rows.slice(1);
 
         const processedData = rawData
             .map((row) => {
-                const rowObject: { [key: string]: string } = {};
+                const rowObject: SheetRow = {};
                 headers.forEach((header, index) => {
-                    rowObject[header] = row[index] || ""; // Handle empty cells
+                    if (!header) return;
+                    rowObject[header] = String(row[index] || "").trim();
                 });
                 return rowObject;
             })
             .filter((item) => {
-                // Filter by is_featured = TRUE (case insensitive)
-                const isFeatured = item["is_featured"]?.toString().toUpperCase() === "TRUE";
-                return isFeatured;
+                const featuredValue = item.is_featured || item.featured || "";
+                return TRUE_VALUES.has(featuredValue.toUpperCase());
             });
 
         return processedData;

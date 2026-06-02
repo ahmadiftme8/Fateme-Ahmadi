@@ -1,4 +1,17 @@
+
+
 @import "tailwindcss";
+
+
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-big-shoulders: "Big Shoulders Display", sans-serif;
+  --font-vazirmatn: "Vazirmatn", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-anton: "Anton SC", sans-serif;
+}
+
 
 @font-face {
   font-family: "Vazirmatn";
@@ -32,6 +45,77 @@
   font-display: swap;
 }
 
+
+
+
+
+/* globals.css */
+
+/* Poppins Font */
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400; /* Corresponds to Poppins-Regular */
+  src: url('/fonts/english/poppins/Poppins-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500; /* Corresponds to Poppins-Medium */
+  src: url('/fonts/english/poppins/Poppins-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600; /* Corresponds to Poppins-SemiBold */
+  src: url('/fonts/english/poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Big Shoulders Display Font */
+/* Assuming BigShouldersDisplay-Black.ttf is the only variant you need for this font */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-weight: 900; /* Assuming 'Black' corresponds to a high weight like 900 */
+  src: url('/fonts/english/big-shoulders/BigShouldersDisplay-Black.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Bebas Neue Font (used for anton SC) */
+/* Note: The original JS code mentioned 'anton-sc' folder but used 'BebasNeue-Regular.ttf'.
+   If 'BebasNeue-Regular.ttf' is indeed the correct font file for 'anton-sc',
+   this rule will apply. If you have a different file for 'anton-sc', please adjust the path. */
+@font-face {
+  font-family: 'Anton SC'; /* Using the variable name as font-family for clarity */
+  font-weight: 400;
+  src: url('/fonts/english/anton-sc/BebasNeue-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Swis721 BlkCn BT Black Font (used for inter) */
+/* Note: The original JS code mentioned 'inter' folder but used 'Swis721-BlkCn-BT-Black.ttf'.
+   If this is the correct file for 'inter', this rule applies. */
+@font-face {
+  font-family: 'Inter'; /* Using the variable name as font-family for clarity */
+  font-weight: 400; /* Assuming the default weight if not specified */
+  src: url('/fonts/english/inter/Swis721-BlkCn-BT-Black.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Antonio Font */
+@font-face {
+  font-family: 'Antonio';
+  font-weight: 400;
+  src: url('/fonts/english/Antonio/Antonio-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+
+
+
+
 @import "../styles/tokens/tokens.css";
 
 *,
@@ -61,6 +145,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.fullPageMain {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
 a {
   
   text-decoration: none;
@@ -87,6 +177,35 @@ button {
   font-family: var(--font-big-shoulders), "Big Shoulders Display", sans-serif;
 }
 
+
+
+/* --- Global Styles --- */
+body {
+  font-family: 'Poppins', sans-serif; /* Default font */
+}
+
+/* Define specific classes for other fonts */
+.font-big-shoulders {
+  font-family: 'Big Shoulders Display', sans-serif;
+}
+
+.font-anton-sc {
+  font-family: 'Anton SC', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-antonio {
+  font-family: 'Antonio', sans-serif;
+}
+
+/* --- End of Font Definitions --- */
+
+
+
+
 .font-vazirmatn {
   font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
@@ -95,11 +214,11 @@ button {
 .sectionTitle {
   margin: 0 0;
   text-align: center;
-  font-family: var(--font-big-shoulders), "Big Shoulders Text", sans-serif;
+  font-family: var(--font-big-shoulders), "Big Shoulders Text", sans-serif ;
   font-weight: 800;
   text-transform: uppercase;
-  font-size: var(--font-size-h2);
-  color: var(--primary-blue);
+  font-size: var(--font-size-h3);
+  color: var(--color-primary);
   letter-spacing: 0.01em;
   width: 100%;
 }
@@ -110,6 +229,23 @@ button {
   .sectionTitle {
     margin-bottom: 21px;
   }
+
+
+.fullPageMain {
+ min-height: 100vh;
+  background-color: var(--color-background);
+  background-image: url(/images/blog/cover1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This is the key property */
+  background-size: cover; /* Changed from 'cover' to 'contain' */
+  
+  /* Or use a specific size if you want 16:9 exactly */
+  /* background-size: 1280px 720px; */ /* Example 16:9 dimensions */
+  
+  position: relative;
+}
+  
 }
 
 ::selection {
@@ -138,12 +274,12 @@ html[lang="fa"] :where(p) {
   letter-spacing: normal;
 }
 
-html[lang="fa"] :where(.font-poppins, .font-big-shoulders, .links, .link, .localeText, .contactLabelMobile, .contactLabelDesktop, .contactBtn, .actionsMenu .contactBtn) {
+/* html[lang="fa"] :where(.font-poppins, .font-big-shoulders, .links, .link, .localeText, .contactLabelMobile, .contactLabelDesktop, .contactBtn, .actionsMenu .contactBtn) {
   font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
-}
+} */
 
 html[lang="fa"] [class*="tracking-"] {
   letter-spacing: normal;

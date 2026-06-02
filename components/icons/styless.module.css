@@ -1,0 +1,66 @@
+.cardImage{
+     flex-shrink: 0;
+  margin-left: 0px;
+  align-self: flex-end;
+  position: relative;
+  bottom: 10px;
+  /* background-color: red; */
+  overflow: visible;
+}
+
+@media (min-width: 1101px) {
+
+  .cardImage{
+     flex-shrink: 0;
+    
+   
+  margin-left: -30px;
+  align-self: flex-end;
+  /* background-color: rgb(216, 163, 17); */
+   position: relative;
+  bottom: -5px;
+  
+ 
+}
+
+}
+
+
+
+@media (max-width: 600px) and (min-width: 376px) {
+  .cardImage {
+    width: 119px;
+    height: 121px;
+    position: relative;
+    bottom: -15px;
+    flex: none;
+    margin-bottom: -15px;
+    align-self: center;
+    /*  background-color: rgb(34, 161, 72); */
+  }
+
+}
+
+@media (max-width: 375px) {
+
+    .cardImage {
+    width: 95px;
+    height: 97px;
+    position: relative;
+    bottom: -10px;
+    flex: none;
+    margin: 0;
+    align-self: center;
+    /* background-color: rgb(118, 236, 252); */
+  }
+
+}
+
+
+
+
+
+
+
+
+

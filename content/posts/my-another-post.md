@@ -1,0 +1,7 @@
+---
+title: "My First Blog Post"
+date: "2024-01-15"
+excerpt: "Today, I went for a haircut, Afterward, because the weather was nice, I decided to take a walk and see what was happening in the city (especially after being home for so long). These are some shots and moments I captured (today and some days ago). Walking alone at 3 pm felt a bit scary, with Basij and Iraqi forces visible all over the streets with their guns. The entire time I was walking, I was thinking about BiPooli, war, and loneliness. Yet, the weather and clouds were so beautiful. Tonight is one of those nights where I wish I could have a cigarette . I need a meditation to forget some of the things I saw outside. [A haircut always helps me feel better, but today it didn’t]."
+---
+
+Today, I went for a haircut, Afterward, because the weather was nice, I decided to take a walk and see what was happening in the city (especially after being home for so long). These are some shots and moments I captured (today and some days ago). Walking alone at 3 pm felt a bit scary, with Basij and Iraqi forces visible all over the streets with their guns. The entire time I was walking, I was thinking about BiPooli, war, and loneliness. Yet, the weather and clouds were so beautiful. Tonight is one of those nights where I wish I could have a cigarette . I need a meditation to forget some of the things I saw outside. [A haircut always helps me feel better, but today it didn’t].

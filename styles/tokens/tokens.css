@@ -1,10 +1,24 @@
+
+@font-face {
+  font-family: 'BigShoulders';
+  src: url('/fonts/english/big-shoulders/BigShouldersDisplay-Black.ttf') format('truetype');
+  font-weight: 700; /* Assuming Black is a bold weight */
+  font-style: normal;
+}
+
 :root {
   color-scheme: light;
   /* Colors - Light (Default) */
   --color-background: #d9d9d9;
-  --color-foreground: #121212;
+   --color-background-lowopacity: #f0f0f0;
+   --color-background-lowopacity2: #dfdfdf;
+  --color-foreground: #383838;
   --color-primary: #1f67f1;
   --color-accent: #ea5039;
+  --color-foreground-lowopacity: #616161;
+  --color-foreground-lowopacity2: #d1d1d1;
+    --color-foreground-lowopacity3: #c9c9c9;
+  
 
   /* Color Aliases */
   --primary-blue: #1f67f1;
@@ -21,10 +35,12 @@
   --text-gray: #797979;
   --border-light: #dcdcdc;
   --primary-light: #e8f0ff;
+  --nav-border-color :#b7b7b7;
 
   /* Typography - Fonts */
   --font-poppins: var(--font-poppins), 'Poppins', sans-serif;
-  --font-big-shoulders: var(--font-big-shoulders), 'Big Shoulders Text', sans-serif;
+  --font-big-shoulders: 'BigShoulders', sans-serif;
+
   --font-vazirmatn: 'Vazirmatn', sans-serif;
   --font-inter: var(--font-inter), 'Inter', sans-serif;
   --font-anton: var(--font-anton-sc), 'Anton SC', sans-serif;
@@ -37,6 +53,7 @@
 
   /* Radius */
   --radius-sm: 8px;
+
   --radius-md: 28px;
   --radius-lg: 31px;
   --radius-full: 100px;
@@ -44,10 +61,20 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --color-background: #121212;
+  --color-background: #202020;
+  --color-background-lowopacity: #646464;
   --color-foreground: #f5f5f5;
-  --color-primary: #6b96ff;
-  --color-accent: #ff826d;
+  --color-foreground-lowopacity: #acacac;
+  --color-foreground-lowopacity2: #2c2c2c;
+  --color-foreground-lowopacity3: #424242;
+   --color-background-lowopacity2: #303030;
+  
+  --color-primary: #5172c5e7;
+ /*  --color-primary: #6b95ff88; */
+  --color-accent: #c54630;
+  --nav-border-color :#4e4e4e;
+
+  
 }
 
 @theme {

@@ -1,0 +1,30 @@
+.postsWrapper{
+  
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin-top: 5em;
+    
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .postsWrapper{
+        width: 600px;
+        margin-top: 3em;
+        
+        
+        
+        
+    }
+
+}
+
+
+
+

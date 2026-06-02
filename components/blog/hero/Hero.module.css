@@ -1,0 +1,92 @@
+.herocontainer{
+    
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index:1;
+    padding-top: 140px;
+
+    width: 100%;
+    height: 60vh;
+    background-image: url(/images/blog/cover1.webp);
+    background-position: left;
+    background-size: cover;
+    position: relative;
+   
+
+}
+
+.herotitle{
+    color: var(--color-primary);
+    font-family: var(--font-big-shoulders);
+    font-size: 55px;
+    margin: 0;
+    padding: 0;
+    line-height: 140%;
+    
+    
+
+}
+
+.herosubtitle{
+    color: var(--color-accent);
+    font-family: var(--font-big-shoulders);
+   position: relative;
+   top: -8px;
+}
+
+
+.heroimg{
+    border-radius: 2rem;
+
+}
+
+.textsContainer{
+position: absolute;
+bottom: -10%;
+left: 20%;
+    
+}
+
+@media (min-width: 768px) {
+    .herocontainer{
+            background-image: none;
+            height: 30vh;
+    }
+
+
+    .textsContainer{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       justify-self: center;
+       align-self: center;
+       position: relative;
+       left:0;
+       right:0;
+       top: 0;
+       bottom: 0;
+}
+
+.herotitle{
+ font-size: 100px;
+ text-transform: uppercase;
+ color: #d9d9d9;
+ 
+}
+
+.herosubtitle{
+    font-size: 25px;
+   
+}
+
+
+}
+
+
+
+

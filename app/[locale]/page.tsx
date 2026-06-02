@@ -1,11 +1,16 @@
-import { HomeHero } from "@/components/blocks/HomeHero";
-import FeaturedProjects from "@/components/blocks/FeaturedProjects";
+import { HomeHero } from "@/components/blocks/hero/HomeHero";
+import FeaturedProjects from "@/components/blocks/projects/FeaturedProjects";
 // Trigger rebuild
-import Services from "@/components/blocks/Services";
-import TrustedBy from "@/components/blocks/TrustedBy";
-import FAQ from "@/components/blocks/FAQ";
-import ScopeQuiz from "@/components/estimator/ScopeQuiz";
+import Services from "@/components/blocks/services/Services";
+import TrustedBy from "@/components/blocks/trustedby/TrustedBy";
+import FAQ from "@/components/blocks/FAQ/FAQ";
+import ContactMe from "@/components/blocks/contact/ContactMe";
 import { getTranslations } from "next-intl/server";
+import ThemeToggle from '@/components/ui/ThemeToggle'
+import { PageTheme } from "@/components/utility/PageTheme";
+import { getSheetData } from "@/lib/googleSheets";
+/* import { Header } from "@/components/layout/header/Header"; */
+
 
 type PageParams = {
   params: Promise<{ locale: string }>;
@@ -29,20 +34,22 @@ export async function generateMetadata({ params }: PageParams) {
     },
   };
 }
-
-import { getSheetData } from "@/lib/googleSheets";
-
 export default async function HomePage() {
   const projects = await getSheetData();
 
   return (
     <>
+    
+    <PageTheme defaultTheme="light" storageKey="fateme-theme-home" />
+    <ThemeToggle defaultTheme="light" storageKey="fateme-theme-home" />
       <HomeHero />
+      
+      
       <Services />
       <FeaturedProjects projects={projects} />
       <TrustedBy />
       <FAQ />
-      <ScopeQuiz />
+      <ContactMe />
     </>
   );
 }
