@@ -7,10 +7,7 @@ import styles from "./AnimatedDottedBackground.module.css";
 export function AnimatedDottedBackground() {
   const pathname = usePathname();
   const bgRef = useRef<HTMLDivElement>(null);
-
-  if (pathname === "/en/blog" || pathname === "/fa/blog") {
-    return null;
-  }
+  const hideBackground = pathname === "/en/blog" || pathname === "/fa/blog";
 
   useEffect(() => {
     const updateOffset = () => {
@@ -38,6 +35,10 @@ export function AnimatedDottedBackground() {
       observer.disconnect();
     };
   }, []);
+
+  if (hideBackground) {
+    return null;
+  }
 
   return (
     <div ref={bgRef} className={styles.dottedBackground} aria-hidden="true" />
