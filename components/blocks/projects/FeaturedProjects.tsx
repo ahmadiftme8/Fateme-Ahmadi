@@ -1,10 +1,17 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
 import styles from "./FeaturedProjects.module.css";
-import WheelCarousel from "./WheelCarousel";
+
+const WheelCarousel = dynamic(() => import("./WheelCarousel"), {
+  ssr: false,
+  loading: () => (
+    <div className={styles.featuredProjects__carouselPlaceholder} aria-hidden />
+  ),
+});
 
 type Category = {
   id: string;

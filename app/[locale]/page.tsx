@@ -1,15 +1,37 @@
+import nextDynamic from "next/dynamic";
 import { HomeHero } from "@/components/blocks/hero/HomeHero";
-import FeaturedProjects from "@/components/blocks/projects/FeaturedProjects";
-// Trigger rebuild
-import Services from "@/components/blocks/services/Services";
-import TrustedBy from "@/components/blocks/trustedby/TrustedBy";
-import FAQ from "@/components/blocks/FAQ/FAQ";
-import ContactMe from "@/components/blocks/contact/ContactMe";
 import { getTranslations } from "next-intl/server";
-import ThemeToggle from '@/components/ui/ThemeToggle'
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import { PageTheme } from "@/components/utility/PageTheme";
 import { getSheetData } from "@/lib/googleSheets";
-/* import { Header } from "@/components/layout/header/Header"; */
+
+const Services = nextDynamic(
+  () => import("@/components/blocks/services/Services"),
+  { loading: () => <section aria-busy className="min-h-[400px]" /> }
+);
+
+const FeaturedProjects = nextDynamic(
+  () => import("@/components/blocks/projects/FeaturedProjects"),
+  {
+    loading: () => (
+      <section id="portfolio" aria-busy className="min-h-[480px]" />
+    ),
+  }
+);
+
+const TrustedBy = nextDynamic(
+  () => import("@/components/blocks/trustedby/TrustedBy"),
+  { loading: () => <section aria-busy className="min-h-[200px]" /> }
+);
+
+const FAQ = nextDynamic(() => import("@/components/blocks/FAQ/FAQ"), {
+  loading: () => <section aria-busy className="min-h-[300px]" />,
+});
+
+const ContactMe = nextDynamic(
+  () => import("@/components/blocks/contact/ContactMe"),
+  { loading: () => <section aria-busy className="min-h-[400px]" /> }
+);
 
 export const dynamic = "force-static";
 export const revalidate = 3600;
@@ -41,12 +63,10 @@ export default async function HomePage() {
 
   return (
     <>
-    
-    <PageTheme defaultTheme="light" storageKey="fateme-theme-home" />
-    <ThemeToggle defaultTheme="light" storageKey="fateme-theme-home" />
+      <PageTheme defaultTheme="light" storageKey="fateme-theme-home" />
+      <ThemeToggle defaultTheme="light" storageKey="fateme-theme-home" />
       <HomeHero />
-      
-      
+
       <Services />
       <FeaturedProjects projects={projects} />
       <TrustedBy />

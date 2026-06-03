@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
 import { LocaleAttributesUpdater } from "@/components/utility/LocaleAttributesUpdater";
 import { ScrollProvider } from "@/components/utility/ScrollContext";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsightsLazy } from "@/components/utility/SpeedInsightsLazy";
 
 import { getDirection } from "@/lib/i18n";
 import nextIntlConfig, { AppLocale, locales } from "@/next-intl.config";
@@ -56,7 +56,7 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1">
             {children}
-            <SpeedInsights/>
+            <SpeedInsightsLazy />
           </main>
           <Footer />
         </div>

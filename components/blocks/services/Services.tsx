@@ -11,8 +11,6 @@ import WebDevelopment from '../public/images/vectors/web-development.svg';  */
  import UiuxDesign from '../../icons/UiuxDesign';
  import VideoEditor from '../../icons/VideoEditor';
 
-  console.log('GraphicDesigner:', GraphicDesigner);
-
 type Service = {
   id: number;
   title: string;
