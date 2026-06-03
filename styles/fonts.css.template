@@ -1,0 +1,81 @@
+/* @font-face rules — version injected at build via scripts/font-asset-version.mjs */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-400.woff2?v=__FONT_VERSION__") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-500.woff2?v=__FONT_VERSION__") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-600.woff2?v=__FONT_VERSION__") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-700.woff2?v=__FONT_VERSION__") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("/fonts/english/poppins/Poppins-Regular.ttf?v=__FONT_VERSION__") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("/fonts/english/poppins/Poppins-Medium.ttf?v=__FONT_VERSION__") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("/fonts/english/poppins/Poppins-SemiBold.ttf?v=__FONT_VERSION__") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Big Shoulders Display";
+  font-weight: 900;
+  src: url("/fonts/english/big-shoulders/BigShouldersDisplay-Black.ttf?v=__FONT_VERSION__") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anton SC";
+  font-weight: 400;
+  src: url("/fonts/english/anton-sc/BebasNeue-Regular.ttf?v=__FONT_VERSION__") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("/fonts/english/inter/Swis721-BlkCn-BT-Black.ttf?v=__FONT_VERSION__") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Antonio";
+  font-weight: 400;
+  src: url("/fonts/english/Antonio/Antonio-Regular.ttf?v=__FONT_VERSION__") format("truetype");
+  font-display: swap;
+}

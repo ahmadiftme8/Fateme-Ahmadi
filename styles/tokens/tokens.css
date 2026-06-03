@@ -1,11 +1,3 @@
-
-@font-face {
-  font-family: 'BigShoulders';
-  src: url('/fonts/english/big-shoulders/BigShouldersDisplay-Black.ttf') format('truetype');
-  font-weight: 700; /* Assuming Black is a bold weight */
-  font-style: normal;
-}
-
 :root {
   color-scheme: light;
   /* Colors - Light (Default) */
@@ -39,7 +31,7 @@
 
   /* Typography - Fonts */
   --font-poppins: var(--font-poppins), 'Poppins', sans-serif;
-  --font-big-shoulders: 'BigShoulders', sans-serif;
+  --font-big-shoulders: "Big Shoulders Display", sans-serif;
 
   --font-vazirmatn: 'Vazirmatn', sans-serif;
   --font-inter: var(--font-inter), 'Inter', sans-serif;

@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "node scripts/font-asset-version.mjs && next dev --turbopack",
+    "prebuild": "node scripts/font-asset-version.mjs",
     "build": "next build",
     "analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
