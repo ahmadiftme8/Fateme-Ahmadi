@@ -1,6 +1,8 @@
 import AboutHero from "@/components/about/AboutHero";
 import { getTranslations } from "next-intl/server";
 
+export const dynamic = "force-static";
+export const revalidate = 3600;
 
 type PageParams = {
   params: Promise<{ locale: string }>;

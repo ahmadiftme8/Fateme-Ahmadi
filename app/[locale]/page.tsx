@@ -11,6 +11,8 @@ import { PageTheme } from "@/components/utility/PageTheme";
 import { getSheetData } from "@/lib/googleSheets";
 /* import { Header } from "@/components/layout/header/Header"; */
 
+export const dynamic = "force-static";
+export const revalidate = 3600;
 
 type PageParams = {
   params: Promise<{ locale: string }>;

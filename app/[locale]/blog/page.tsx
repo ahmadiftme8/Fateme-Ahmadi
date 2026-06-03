@@ -4,7 +4,8 @@ import { getAllPosts } from '@/lib/posts';
 import BlogPostList from "@/components/blog/list/BlogPostList";
 import { PageTheme } from "@/components/utility/PageTheme";
 
-
+export const dynamic = "force-static";
+export const revalidate = 3600;
 
 export async function generateMetadata() {
     // const { locale } = await params;

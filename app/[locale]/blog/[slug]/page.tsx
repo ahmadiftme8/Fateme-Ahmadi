@@ -2,12 +2,13 @@ import { notFound } from 'next/navigation';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
 import Markdown from 'react-markdown';
 
-// Generate static paths at build time
+export const dynamic = 'force-static';
+export const revalidate = 3600;
+
+// Slugs are combined with [locale] from app/[locale]/layout.tsx generateStaticParams
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
-  return slugs.map((slug) => ({
-    slug: slug,
-  }));
+  return slugs.map((slug) => ({ slug }));
 }
 
 // Page component

@@ -1,10 +1,11 @@
+import { unstable_cache } from "next/cache";
 import { google } from "googleapis";
 
 type SheetRow = Record<string, string>;
 
 const TRUE_VALUES = new Set(["TRUE", "YES", "1"]);
 
-export async function getSheetData() {
+async function fetchSheetData() {
     try {
         if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY) {
             console.error("Missing Google Sheets credentials in environment variables.");
@@ -58,3 +59,7 @@ export async function getSheetData() {
         return [];
     }
 }
+
+export const getSheetData = unstable_cache(fetchSheetData, ["google-sheets-featured"], {
+    revalidate: 3600,
+});
