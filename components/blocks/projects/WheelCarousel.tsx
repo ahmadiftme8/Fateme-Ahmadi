@@ -480,6 +480,8 @@ function WheelCard({ project, isActive, onClick }: { project: Project, isActive:
                         alt="Under Construction"
                         width={150}
                         height={150}
+                        sizes="150px"
+                        quality={75}
                         className="object-contain"
                     />
                     <p className="font-poppins font-semibold text-[16px] text-[var(--color-primary)] mt-2">
@@ -565,6 +567,8 @@ function WheelCard({ project, isActive, onClick }: { project: Project, isActive:
                     src={image}
                     alt={title}
                     fill
+                    sizes="242px"
+                    quality={75}
                     className="object-cover"
                 />
             </motion.div>

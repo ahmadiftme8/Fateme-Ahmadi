@@ -74,6 +74,8 @@ function CarouselRow({ brands, direction }: { brands: typeof trustedBrands, dire
               alt={`${brand.name} Logo`}
               width={120}
               height={40}
+              sizes="(max-width: 768px) 100px, 120px"
+              quality={75}
             />
           ) : null}
         </div>

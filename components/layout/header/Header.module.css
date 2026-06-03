@@ -114,6 +114,7 @@
 .avatar {
   grid-column: 1;
   grid-row: 1;
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -124,9 +125,7 @@
   place-items: center;
 }
 
-.avatar img {
-  width: 100%;
-  height: 100%;
+.avatarImage {
   object-fit: cover;
 }
 
@@ -598,7 +597,7 @@
 }
 
 /* Avatar border on About page */
-.barAboutVariant .avatar img {
+.barAboutVariant .avatarImage {
   border-color: #8F8F8F;
 }
 

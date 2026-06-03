@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { ProfileImage } from "@/components/ui/ProfileImage";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -220,12 +220,9 @@ const isAboutPage = segment === 'about' || segment === 'blog';
         })}
       >
         <div className={styles.avatar}>
-          <Image
-            src="/fateme-pic.png"
+          <ProfileImage
             alt="Fateme Ahmadi portrait"
-            width={74}
-            height={74}
-            priority
+            className={styles.avatarImage}
           />
         </div>
 

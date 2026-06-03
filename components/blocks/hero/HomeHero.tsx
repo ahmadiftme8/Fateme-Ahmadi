@@ -1,7 +1,7 @@
 ﻿"use client";
 
-import Image from "next/image";
 import { Download, Eye } from "lucide-react";
+import { ProfileImage } from "@/components/ui/ProfileImage";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/Button";
@@ -36,11 +36,8 @@ export function HomeHero() {
             <div className={styles.profileWrapper}>
               <div className={styles.heroImageFrame}>
                 <div className={styles.heroCard}>
-                  <Image
-                    src="/fateme-pic.png"
+                  <ProfileImage
                     alt={t("imageAlt")}
-                    fill
-                    sizes="205px"
                     priority
                     className={styles.heroImage}
                   />

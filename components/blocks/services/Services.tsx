@@ -144,6 +144,8 @@ export default function Services() {
                   alt=""
                   width={50}
                   height={50}
+                  sizes="50px"
+                  quality={75}
                 />
               </button>
             </div>

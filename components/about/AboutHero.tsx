@@ -85,6 +85,8 @@ export default function AboutHero() {
               alt={t("images.workspace1")}
               width={240}
               height={340}
+              sizes="(max-width: 768px) 50vw, 240px"
+              quality={75}
               className={styles.imgBack}
             />
             <Image
@@ -92,6 +94,8 @@ export default function AboutHero() {
               alt={t("images.workspace2")}
               width={240}
               height={340}
+              sizes="(max-width: 768px) 50vw, 240px"
+              quality={75}
               className={styles.imgFront}
             />
           </div>
@@ -110,6 +114,8 @@ export default function AboutHero() {
               alt={t("images.journey1")}
               width={240}
               height={340}
+              sizes="(max-width: 768px) 50vw, 240px"
+              quality={75}
               className={styles.imgBack}
             />
             <Image
@@ -117,6 +123,8 @@ export default function AboutHero() {
               alt={t("images.journey2")}
               width={240}
               height={340}
+              sizes="(max-width: 768px) 50vw, 240px"
+              quality={75}
               className={styles.imgFront}
             />
           </div>
@@ -135,6 +143,8 @@ export default function AboutHero() {
               alt={t("images.current1")}
               width={240}
               height={340}
+              sizes="(max-width: 768px) 50vw, 240px"
+              quality={75}
               className={styles.imgBack}
             />
             <Image
@@ -142,6 +152,8 @@ export default function AboutHero() {
               alt={t("images.current2")}
               width={240}
               height={340}
+              sizes="(max-width: 768px) 50vw, 240px"
+              quality={75}
               className={styles.imgFront}
             />
           </div>
