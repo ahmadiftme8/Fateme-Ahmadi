@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Download, Eye } from "lucide-react";
 import { ProfileImage } from "@/components/ui/ProfileImage";
@@ -39,6 +39,7 @@ export function HomeHero() {
                   <ProfileImage
                     alt={t("imageAlt")}
                     priority
+                    fetchPriority="high"
                     className={styles.heroImage}
                   />
                 </div>

@@ -222,6 +222,8 @@ const isAboutPage = segment === 'about' || segment === 'blog';
         <div className={styles.avatar}>
           <ProfileImage
             alt="Fateme Ahmadi portrait"
+            priority={true}
+            fetchPriority="high"
             className={styles.avatarImage}
           />
         </div>

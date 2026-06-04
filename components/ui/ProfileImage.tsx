@@ -8,12 +8,14 @@ export const PROFILE_IMAGE_SIZES = "(max-width: 768px) 166px, 205px";
 type ProfileImageProps = {
   alt: string;
   priority?: boolean;
+  fetchPriority?: "high" | "low" | "auto";
   className?: string;
 };
 
 export function ProfileImage({
   alt,
   priority = false,
+  fetchPriority = "auto",
   className,
 }: ProfileImageProps) {
   return (
@@ -24,6 +26,7 @@ export function ProfileImage({
       sizes={PROFILE_IMAGE_SIZES}
       quality={75}
       priority={priority}
+      fetchPriority={fetchPriority}
       className={className}
     />
   );
