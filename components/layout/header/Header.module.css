@@ -127,6 +127,7 @@
 
 .avatarImage {
   object-fit: cover;
+  object-position: top;
 }
 
 .barOpen .avatar {
