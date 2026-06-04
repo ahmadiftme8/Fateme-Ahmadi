@@ -8,6 +8,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig = {
   turbopack: {}, // good for dev with --turbo
+  experimental: {
+    optimizeCss: true, // Enables automatic critical CSS extraction using critters
+  },
   async headers() {
     if (process.env.NODE_ENV !== 'production') {
       return [];

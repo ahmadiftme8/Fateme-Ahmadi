@@ -34,6 +34,37 @@ export default function RootLayout({
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
+      <head suppressHydrationWarning>
+        {/* CSS deferral script - runs immediately to prevent render-blocking */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                // Defer all Next.js stylesheet links to prevent render blocking
+                var links = document.querySelectorAll('link[rel="stylesheet"][data-precedence="next"]');
+                links.forEach(function(link) {
+                  link.media = 'print';
+                  link.onload = function() {
+                    this.media = 'all';
+                  };
+                  // For browsers that already have the stylesheet cached
+                  if (link.sheet) {
+                    link.media = 'all';
+                  }
+                });
+                // Ensure all CSS is applied on load
+                window.addEventListener('load', function() {
+                  var remainingLinks = document.querySelectorAll('link[rel="stylesheet"][media="print"]');
+                  remainingLinks.forEach(function(link) {
+                    link.media = 'all';
+                  });
+                });
+              })();
+            `
+          }}
+          suppressHydrationWarning
+        />
+      </head>
       <body
         className={`${bodyFontClass} min-h-dvh antialiased `}
         data-theme="light"
