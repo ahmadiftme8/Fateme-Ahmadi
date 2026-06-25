@@ -13,6 +13,8 @@ import nextIntlConfig, { AppLocale, locales } from "@/next-intl.config";
 
 import "../globals.css";
 
+import { PageLoader } from "@/components/utility/PageLoader";
+
 type LayoutProps = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
@@ -47,19 +49,21 @@ export default async function LocaleLayout({
       
       <ScrollProvider>
         <LocaleAttributesUpdater />
-        <div
-          className="flex min-h-dvh flex-col relative"
-          data-locale={locale}
-          data-dir={dir}
-        >
-          <AnimatedDottedBackground />
-          <Header />
-          <main className="flex-1">
-            {children}
-            <SpeedInsightsLazy />
-          </main>
-          <Footer />
-        </div>
+        <PageLoader>
+          <div
+            className="flex min-h-dvh flex-col relative"
+            data-locale={locale}
+            data-dir={dir}
+          >
+            <AnimatedDottedBackground />
+            <Header />
+            <main className="flex-1">
+              {children}
+              <SpeedInsightsLazy />
+            </main>
+            <Footer />
+          </div>
+        </PageLoader>
       </ScrollProvider>
     </NextIntlClientProvider>
   );
