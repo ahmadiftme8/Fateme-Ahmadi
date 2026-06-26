@@ -1,7 +1,7 @@
 /* @font-face rules — version injected at build via scripts/font-asset-version.mjs */
 @font-face {
   font-family: "Vazirmatn";
-  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-400.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-400.woff2?v=449a576") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Vazirmatn";
-  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-500.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-500.woff2?v=449a576") format("woff2");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Vazirmatn";
-  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-600.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-600.woff2?v=449a576") format("woff2");
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: "Vazirmatn";
-  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-700.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/Vazirmatn/Vazirmatn-Arabic-700.woff2?v=449a576") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -35,7 +35,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/english/poppins/Poppins-Regular.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/english/poppins/Poppins-Regular.woff2?v=449a576") format("woff2");
   font-display: swap;
 }
 
@@ -43,7 +43,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/english/poppins/Poppins-Medium.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/english/poppins/Poppins-Medium.woff2?v=449a576") format("woff2");
   font-display: swap;
 }
 
@@ -51,7 +51,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  src: url("/fonts/english/poppins/Poppins-SemiBold.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/english/poppins/Poppins-SemiBold.woff2?v=449a576") format("woff2");
   font-display: swap;
 }
 
@@ -59,7 +59,7 @@
   font-family: "Big Shoulders Display";
   font-style: normal;
   font-weight: 900;
-  src: url("/fonts/english/big-shoulders/BigShouldersDisplay-Black.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/english/big-shoulders/BigShouldersDisplay-Black.woff2?v=449a576") format("woff2");
   font-display: swap;
 }
 
@@ -67,7 +67,7 @@
   font-family: "Anton SC";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/english/anton-sc/BebasNeue.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/english/anton-sc/BebasNeue.woff2?v=449a576") format("woff2");
   font-display: swap;
 }
 
@@ -76,7 +76,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/english/inter/Swis721-BlkCn-BT-Black.ttf?v=f8983b4") format("truetype");
+  src: url("/fonts/english/inter/Swis721-BlkCn-BT-Black.ttf?v=449a576") format("truetype");
   font-display: swap;
 }
 
@@ -84,6 +84,6 @@
   font-family: "Antonio";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/english/Antonio/Antonio-Regular.woff2?v=f8983b4") format("woff2");
+  src: url("/fonts/english/Antonio/Antonio-Regular.woff2?v=449a576") format("woff2");
   font-display: swap;
 }

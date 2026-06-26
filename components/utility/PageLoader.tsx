@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { DotLottieReact, DotLottie } from "@lottiefiles/dotlottie-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import loaderData from "@/public/loader-data.json";
 
 interface PageLoaderProps {
   children: React.ReactNode;
@@ -11,8 +12,6 @@ interface PageLoaderProps {
 export function PageLoader({ children }: PageLoaderProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
-  const [lottieLoaded, setLottieLoaded] = useState(false);
-  const [dotLottie, setDotLottie] = useState<DotLottie | null>(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -53,32 +52,6 @@ export function PageLoader({ children }: PageLoaderProps) {
     };
   }, []);
 
-  // Listen to Lottie loading events via dotLottie instance
-  useEffect(() => {
-    if (!dotLottie) return;
-
-    const handleLoad = () => {
-      setLottieLoaded(true);
-    };
-
-    dotLottie.addEventListener("load", handleLoad);
-
-    // If it's already loaded when ref is set
-    if (dotLottie.isLoaded) {
-      setLottieLoaded(true);
-    }
-
-    // Safety fallback: if something blocks Lottie loading, fade in anyway after 3 seconds
-    const safetyTimer = setTimeout(() => {
-      setLottieLoaded(true);
-    }, 3000);
-
-    return () => {
-      dotLottie.removeEventListener("load", handleLoad);
-      clearTimeout(safetyTimer);
-    };
-  }, [dotLottie]);
-
   // Lock scrolling while loading
   useEffect(() => {
     if (isLoading) {
@@ -106,25 +79,12 @@ export function PageLoader({ children }: PageLoaderProps) {
             className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[var(--color-background)]"
           >
             <div className="w-48 h-48 md:w-64 md:h-64 relative flex items-center justify-center">
-              {/* Fallback spinner while Lottie initializes/downloads */}
-              {!lottieLoaded && (
-                <div
-                  className="absolute w-10 h-10 border-2 rounded-full animate-spin"
-                  style={{
-                    borderColor: "var(--color-foreground-lowopacity2)",
-                    borderTopColor: "var(--color-primary)",
-                  }}
-                />
-              )}
               {isMounted && (
-                <div className={`w-full h-full transition-opacity duration-300 ${lottieLoaded ? "opacity-100" : "opacity-0"}`}>
-                  <DotLottieReact
-                    src="/loader.lottie"
-                    loop
-                    autoplay
-                    dotLottieRefCallback={setDotLottie}
-                  />
-                </div>
+                <DotLottieReact
+                  data={loaderData}
+                  loop
+                  autoplay
+                />
               )}
             </div>
           </motion.div>
